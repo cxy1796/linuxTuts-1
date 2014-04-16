@@ -150,7 +150,6 @@ button {
 }
 
 footer {
-	background: #222;
 	display: block;
 	width: 100%;
 }
@@ -161,10 +160,8 @@ footer {
 }
 
 #footerContainer a {
+	color: #edb451;
 	padding: .5em;
-	background: #EEE;
-	-webkit-border-radius: 10px;
-	border-radius: 10px;
 }
 
 
