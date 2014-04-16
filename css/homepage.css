@@ -1,0 +1,84 @@
+html, body {
+	background: #592547;
+}
+
+#siteHeader nav {
+	background-color: #282828;
+}
+
+#siteHeader nav a {
+	color: #d6d6d6;
+}
+
+#siteHeader a.current {
+	color: #edb451;
+}
+
+#largeLogo h1 {
+	font-size: 6em;
+	text-shadow: 0 4px 10px #000;
+}
+
+.logoLinux {
+	color: #FFF;
+}
+
+.logoTuts {
+	color: #d9663d;
+}
+
+#sections {
+	min-width: 60%;
+	max-width: 90%;
+	margin: 0 1em 3em 1em;
+}
+
+#sections div {
+	display: inline-block;
+}
+
+#sections .section {
+	width: 30%;
+	min-height: 5em;
+	text-align: justify;
+}
+
+
+#sections .divider {
+	width: 1.5%;
+	text-align: center;
+	height: 100%;
+}
+
+#sections .divider div {
+	width: 1px;
+	height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	background: #FFF;
+}
+
+h2 {
+	padding-bottom: .5em;
+	border-bottom: solid 2px #FFF;
+	margin-left: 1em;
+	margin-right: 1em;
+}
+
+button {
+	background: #FFF;
+	color: #000;
+}
+
+#bigSearch input {
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+
+.container {
+	color: #EEE;
+}
+
+.container a {
+	color: #edb451;
+}

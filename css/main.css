@@ -13,17 +13,6 @@ a {
 	color: #000;
 }
 
-#siteHeader {
-	background: #000;
-	color: #D6D6D6;
-}
-
-#siteHeader h1 {
-	font-family: monospace;
-	font-size: 3em;
-	padding: 1em 1.5em 1.5em 1.5em;
-}
-
 #siteHeader nav {
 	text-align: left;
 	background: #F6F6F6;;
@@ -46,6 +35,16 @@ a {
 
 #siteHeader nav a:first-child {
 	padding-left: 2em;
+}
+
+#topLogo {
+	display: inline-block;
+	color: #FFF;
+	font-weight: bold;
+	font-size: 2em;
+	margin: 0 .5em;
+	position: relative;
+	top: .1em;
 }
 
 #search {
@@ -157,6 +156,7 @@ footer {
 }
 
 #footerContainer {
+	margin-top: 3em;
 	padding: 2em;
 }
 
