@@ -1,14 +1,19 @@
+<?php
+	include('./includes/Page.php');
+	$page = new Page();
+?>
+
+
 <!DOCTYPE html>
 <head>
-	<title>Linux Tutorials</title>
+	<title>Linux Tutorials - <?php echo $page->getPageName(); ?></title>
 	<meta charset="utf-8">
 	<meta name="description" content="Linux Tutorials">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='http://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" type="text/css" href="css/main.css" />
-	<link rel="stylesheet" type="text/css" href="css/homepage.css" />
+	<?php echo $page->getSection('css'); ?>
 </head>
 <body>
 	<header id="siteHeader">
