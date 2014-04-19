@@ -1,3 +1,4 @@
+Options +FollowSymLinks
 RewriteEngine on
-RewriteRule ^/static/(.*)$ - [L]
-RewriteRule ^([_a-zA-Z0-9\-]*)(/?)$ index.php?page=$1
+RewriteRule ^static/(.*)$ - [L]
+RewriteRule ^([_a-zA-Z0-9\-/]*)(/?)$ index.php?page=$1

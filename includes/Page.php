@@ -9,8 +9,8 @@ class Page {
 		empty($custom) ? $this->loadPage($_GET['page']) : $this->loadPage($custom);
 	}
 
-	public function getPageName() {
-		return $page;
+	public function getPageName($ucfirst = false) {
+		return $ucfirst ? ucfirst($this->page) : $this->page;
 	}
 
 	// Figure out which page is being loaded. Try to load it.
@@ -21,7 +21,7 @@ class Page {
 		if(empty($page)) {
 			$page = 'home';
 		}
-		$this->page = $page;
+		$this->page = strtolower($page);
 	}
 
 	// Attempt to load a page-specific version of this section. If none exists, use default.
@@ -43,7 +43,7 @@ class Page {
 
 	// Temporary. Something better will come later...
 	public function getRootURL() {
-		return 'localhost:8888/linuxTuts';
+		return 'http://localhost:8888/linuxTuts';
 	}
 }
 ?>

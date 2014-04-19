@@ -1,7 +1,7 @@
 <?php
 
 	$rootUrl = $this->getRootUrl();
-	
+
 	// Top Nav Items
 	$items = array(
 			'Home' => $rootUrl . '/',
@@ -15,8 +15,9 @@
 	<span id="topLogo">LT</span>
 	<ul>
 	<?php
+		$page = $this->getPageName();
 		foreach($items as $name => $link) {
-			$class = (isset($page) && $page === $this->getPageName()) ? 'class="active"' : '';
+			$class = ($page === strtolower($name)) ? 'class="active"' : '';
 			echo "<li $class><a href=\"$link\" $class>$name</a></li>";
 		}
 	?>

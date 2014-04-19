@@ -1,1 +1,1 @@
-<link rel="stylesheet" type="text/css" href="static/css/main.css" />
+<link rel="stylesheet" type="text/css" href="<?php echo $this->getRootURL(); ?>/static/css/main.css" />

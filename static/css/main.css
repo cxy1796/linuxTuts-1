@@ -52,6 +52,10 @@ a {
 	border-bottom: 2px solid transparent;
 }
 
+#siteHeader nav a.active {
+	color: #edb451;
+}
+
 #siteHeader nav a:hover {
 	background: #FFF;
 	border-bottom: 2px solid blue;

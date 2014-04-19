@@ -1,2 +1,2 @@
 <?php echo $this->getSection('css', 'default'); ?>
-<link rel="stylesheet" type="text/css" href="static/css/homepage.css" />
+<link rel="stylesheet" type="text/css" href="<?php echo $this->getRootURL(); ?>/static/css/homepage.css" />
