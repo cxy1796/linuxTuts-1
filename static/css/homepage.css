@@ -10,8 +10,9 @@ html, body {
 	color: #d6d6d6;
 }
 
-#siteHeader a.current {
-	color: #edb451;
+#siteHeader nav a:hover {
+	background: #121212;
+	border-bottom: 2px solid orange;
 }
 
 #largeLogo h1 {
