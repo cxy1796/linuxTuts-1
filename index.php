@@ -3,7 +3,6 @@
 	$page = new Page();
 ?>
 
-
 <!DOCTYPE html>
 <head>
 	<title>Linux Tutorials - <?php echo $page->getPageName(); ?></title>
@@ -17,19 +16,7 @@
 </head>
 <body>
 	<header id="siteHeader">
-		<nav>
-			<span id="topLogo">LT</span>
-			<a href="index.html" class="current">Home</a>
-			<a href="reference.html">Command Reference</a>
-			<a href="#">Sequential Lessons</a>
-			<a href="#">Goal-Driven Guides</a>
-			<a href="#">About</a>
-			<div id="search">
-				<form name="siteSearch" id="siteSearch">
-					<input type="text" name="searchInput" id="searchInput/">
-				</form>
-			</div>
-		</nav>
+		<?php echo $page->getSection('nav'); ?>
 		<div id="largeLogo">
 			<h1><span class="logoLinux">Linux</span><span class="logoTuts">Tuts</span></h1>
 		</div>

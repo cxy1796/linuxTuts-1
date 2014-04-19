@@ -19,6 +19,30 @@ a {
 	white-space:nowrap;
 }
 
+#topLogo {
+	display: inline-block;
+	color: #FFF;
+	font-weight: bold;
+	font-size: 2em;
+	margin: 0 .5em;
+	position: relative;
+	top: .1em;
+}
+
+#siteHeader nav ul {
+	display: inline-block;
+   list-style-type: none;
+   padding: 0;
+   margin: 0;
+}
+
+
+#siteHeader nav ul li {
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+}
+
 #siteHeader nav a{
 	display: inline-block;
 	text-decoration: none;
@@ -33,18 +57,8 @@ a {
 	border-bottom: 2px solid blue;
 }
 
-#siteHeader nav a:first-child {
+#siteHeader nav li:first-child {
 	padding-left: 2em;
-}
-
-#topLogo {
-	display: inline-block;
-	color: #FFF;
-	font-weight: bold;
-	font-size: 2em;
-	margin: 0 .5em;
-	position: relative;
-	top: .1em;
 }
 
 #search {

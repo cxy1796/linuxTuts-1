@@ -40,5 +40,10 @@ class Page {
 			}
 		}
 	}
+
+	// Temporary. Something better will come later...
+	public function getRootURL() {
+		return 'localhost:8888/linuxTuts';
+	}
 }
 ?>
