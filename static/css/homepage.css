@@ -12,7 +12,9 @@ html, body {
 }
 
 #largeLogo h1 {
+	font-family: "Lemon", cursive;
 	font-size: 6em;
+	font-weight: 100;
 	text-shadow: 0 4px 10px #000;
 }
 
