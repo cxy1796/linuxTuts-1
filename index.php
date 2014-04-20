@@ -24,9 +24,19 @@
 			<?php echo $page->getSection('footer'); ?>
 		</div>
 	</footer>
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" language="javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
 	<script src="<?php echo $page->getRootURL(); ?>/static/scripts/svgeezy/svgeezy.min.js"></script>
 	<script>
         svgeezy.init('svgonly', 'png');
     </script>
+    <script>
+	$(document).ready(function() {
+		$('#commands').dataTable({
+			"bFilter": true
+		});
+	} );
+</script>
+
 </body>
 </html>

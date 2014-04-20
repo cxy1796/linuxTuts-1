@@ -5,49 +5,20 @@
 	        <tr>
 	            <th>Command Name</th>
 	            <th>Description</th>
+	            <th>Type</th>
 	        </tr>
 	    </thead>
 	    <tbody>
-			<tr>
-				<td>Command Name</td>
-				<td>Info</td>
-			</tr>
-			<tr>
-				<td>Command Name</td>
-				<td>Info</td>
-			</tr>
-			<tr>
-				<td>Command Name</td>
-				<td>Info</td>
-			</tr>
-			<tr>
-				<td>Command Name</td>
-				<td>Info</td>
-			</tr>
-			<tr>
-				<td>Command Name</td>
-				<td>Info</td>
-			</tr>
-			<tr>
-				<td>Command Name</td>
-				<td>Info</td>
-			</tr>
-			<tr>
-				<td>Command Name</td>
-				<td>Info</td>
-			</tr>
-			<tr>
-				<td>Command Name</td>
-				<td>Info</td>
-			</tr>
-			<tr>
-				<td>Command Name</td>
-				<td>Info</td>
-			</tr>
-			<tr>
-				<td>Command Name</td>
-				<td>Info</td>
-			</tr>
+	    	<?php
+	    		$types = array('Executable','Builtin','Shell Function','Alias');
+	    		for($i=1; $i < 37; $i++) {
+					echo '<tr>
+						<td>Command Name '. $i .'</td>
+						<td>Info</td>
+						<td>' . $types[array_rand($types)].'</td>
+					</tr>';
+				}
+				?>
 		</tbody>
 	</table>
 </div>
