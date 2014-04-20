@@ -17,9 +17,6 @@
 <body>
 	<header id="siteHeader">
 		<?php echo $page->getSection('nav'); ?>
-		<div id="largeLogo">
-			<h1><span class="logoLinux">Linux</span><span class="logoTuts">Tuts</span></h1>
-		</div>
 	</header>
 	<?php echo $page->getSection('content'); ?>
 	<footer>
