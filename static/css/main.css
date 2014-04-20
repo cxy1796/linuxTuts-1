@@ -15,7 +15,7 @@ a {
 
 #siteHeader nav {
 	text-align: left;
-	background: #F6F6F6;;
+	background: #592547;;
 	white-space:nowrap;
 }
 
@@ -43,10 +43,10 @@ a {
 	margin: 0;
 }
 
-#siteHeader nav a{
+#siteHeader nav a {
 	display: inline-block;
 	text-decoration: none;
-	color: #000;
+	color: #d6d6d6;
 	padding: 1em .5em;
 	border-right: 1px solid #CCC;
 	border-bottom: 2px solid transparent;
@@ -58,7 +58,8 @@ a {
 
 #siteHeader nav a:hover {
 	background: #FFF;
-	border-bottom: 2px solid blue;
+	color: #111;
+	border-bottom: 2px solid orange;
 }
 
 #siteHeader nav li:first-child {

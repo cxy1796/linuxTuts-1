@@ -6,13 +6,9 @@ html, body {
 	background-color: #282828;
 }
 
-#siteHeader nav a {
-	color: #d6d6d6;
-}
-
 #siteHeader nav a:hover {
 	background: #121212;
-	border-bottom: 2px solid orange;
+	color: #d6d6d6;
 }
 
 #largeLogo h1 {
