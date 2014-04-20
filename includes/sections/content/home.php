@@ -1,15 +1,21 @@
 <div class="container" style="text-align: center;">
 	<section id="sections">
 		<div class="section">
-			This is some text and maybe a small graphic that describes a site section. Click me!
+			<h2>Reference</h2>
+			<img src="static/images/icons/icon_10918.svg" alt="Reference"/>
+			<p>This is some descriptive text that somebody that isn't me should come up with. Click me!</p>
 		</div>
 		<div class="divider"><div>&nbsp;</div></div>
 		<div class="section">
-			This is some text and maybe a small graphic that describes a site section. Click me!
+			<h2>Lessons</h2>
+			<img src="static/images/icons/icon_31952.svg" alt="Lessons"/>
+			<p>This is some descriptive text that somebody that isn't me should come up with. Click me!</p>
 		</div>
 		<div class="divider"><div>&nbsp;</div></div>
 		<div class="section">
-			This is some text and maybe a small graphic that describes a site section. Click me!
+			<h2>Activities</h2>
+			<img src="static/images/icons/icon_21457.svg" alt="Activities"/>
+			<p>This is some descriptive text that somebody that isn't me should come up with. Click me!</p>
 		</div>
 	</section>
 	<div id="bigSearch">

@@ -37,9 +37,12 @@ html, body {
 #sections .section {
 	width: 30%;
 	min-height: 5em;
-	text-align: justify;
+	text-align: center;
 }
 
+.section > p {
+	text-align: justify;
+}
 
 #sections .divider {
 	width: 1.5%;

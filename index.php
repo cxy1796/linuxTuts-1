@@ -27,5 +27,9 @@
 			<?php echo $page->getSection('footer'); ?>
 		</div>
 	</footer>
+	<script src="<?php echo $page->getRootURL(); ?>/static/scripts/svgeezy/svgeezy.min.js"></script>
+	<script>
+        svgeezy.init('svgonly', 'png');
+    </script>
 </body>
 </html>
