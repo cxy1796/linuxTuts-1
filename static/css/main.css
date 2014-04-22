@@ -78,6 +78,26 @@ a {
 	text-align: left;
 }
 
+.narrow {
+	width: 60em;
+	overflow: hidden;
+}
+
+.legible {
+	font-size: 1.1em;
+	width: 40em;
+	padding: 1em;
+	float: left;
+}
+
+.sideNav {
+	width: 12em;
+	padding-left: 1em;
+	float: right;
+	border-left: 1px solid #C6C6C6;
+	position: relative;
+}
+
 .left, .right {
 	width: 45%;
 	margin: 0 2.5%;
@@ -164,13 +184,47 @@ footer {
 	padding: .5em;
 }
 
-
 table {
 	margin: 2em 0;
 }
 
-.legible {
-	font-size: 1.2em;
-	width: 40em;
+pre {
+	font-family: monospace;
+	background: #222;
+	color: #EEE;
 	padding: 1em;
+	max-width: 100%;
+	overflow-x: auto;
+}
+
+nav.breadcrumbs ul {
+	display: inline-block;
+   list-style-type: none;
+   padding: 0;
+   margin: 0;
+}
+nav.breadcrumbs ul li {
+	display: inline-block;
+	padding: .33em .66em;
+	margin: 0 .5em;
+	background-color: #222;
+	border: 1px solid #000;
+	-webkit-border-radius: 1em;
+	border-radius: 1em;
+}
+nav.breadcrumbs ul li.arrow {
+	background-color: transparent;
+	font-size: 2em;
+	padding: 0;
+	margin: 0 inherit;
+	line-height: 1em;
+	border: none;
+}
+nav.breadcrumbs ul a {
+	text-decoration: none;
+	color: #EEE;
+}
+nav.breadcrumbs ul a li:hover {
+	background-color: #FFF;
+	color: #000;
 }
