@@ -4,18 +4,18 @@
 
 	// Top Nav Items
 	$items = array(
-			'Home' => $rootUrl . '/',
-			'Reference' => $rootUrl . '/reference',
-			'Lessons' => $rootUrl . '/lessons',
-			'Activities' => $rootUrl . '/activities',
-			'About' => $rootUrl . '/about'
+			'Home' => $rootUrl,
+			'Reference' => $rootUrl . 'reference/',
+			'Lessons' => $rootUrl . 'lessons/',
+			'Activities' => $rootUrl . 'activities/',
+			'About' => $rootUrl . 'about/'
 		);
 ?>
 <nav>
 	<span id="topLogo">LT</span>
 	<ul>
 	<?php
-		$page = $this->getPageName();
+		$page = $this->getSectionName();
 		foreach($items as $name => $link) {
 			$class = ($page === strtolower($name)) ? 'class="active"' : '';
 			echo "<li $class><a href=\"$link\" $class>$name</a></li>";
