@@ -86,7 +86,8 @@ class Page {
 
 			$linkPathChunks = array_slice($crumbs, 0, $key+1);
 			$link = $this->getRootURL() . implode('/', $linkPathChunks);
-			$output .= '<a href="'.$link .'/"><li>' . $name . '</li></a><li class="arrow">&rsaquo;</li>';
+			$output .= '<a href="'.$link .'/"><li>' . $name . '</li></a>
+			<li class="arrow">&rsaquo;</li>';
 		}
 		$output = rtrim($output, '<li class="arrow">&rsaquo;</li>');
 		$output .= '</ul>';
