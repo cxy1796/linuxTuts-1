@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container legible">
 	<h2>Command Reference</h2>
 	<table id="commands">
 		<thead>

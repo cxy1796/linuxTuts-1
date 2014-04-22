@@ -15,7 +15,7 @@ a {
 
 #siteHeader nav {
 	text-align: left;
-	background: #592547;;
+	background: #592547;
 	white-space:nowrap;
 }
 
@@ -73,6 +73,7 @@ a {
 }
 
 .container {
+	margin: 0 auto;
 	overflow: hidden;
 	text-align: left;
 }
@@ -107,7 +108,8 @@ h2 {
 	line-height: 1em;
 	font-weight: 400;
 	padding-bottom: .5em;
-	border-bottom: solid 3px #4377bf;
+	border-bottom: solid 3px #592947;
+	margin-top: 1em;
 }
 
 button {
@@ -124,21 +126,6 @@ button {
 	-moz-box-shadow:inset 0 1px 0 rgba(255,255,255,0.5);
 	-webkit-box-shadow:inset 0 1px 0 rgba(255,255,255,0.5);
 	box-shadow:inset 0 1px 0 rgba(255,255,255,0.5);
-}
-
-@font-face {
-    font-family: 'EntypoRegular';
-    src: url('../font/entypo.eot');
-    src: url('../font/entypo.eot?#iefix') format('embedded-opentype'),
-         url('../font/entypo.woff') format('woff'),
-         url('../font/entypo.ttf') format('truetype'),
-         url('../font/entypo.svg#EntypoRegular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-.entypo {
-	font-family: 'EntypoRegular';
 }
 
 .button {
@@ -162,13 +149,6 @@ button {
 	color: #FFF;
 }
 
-.button .entypo {
-	font-size: 2.5em;
-	padding-right: .2em;
-	position: relative;
-	top: .1em;
-}
-
 footer {
 	display: block;
 	width: 100%;
@@ -189,8 +169,8 @@ table {
 	margin: 2em 0;
 }
 
-table td {
-	border: solid 1px #000;
-	padding: .33em;
-	min-width: 20em;
+.legible {
+	font-size: 1.2em;
+	width: 40em;
+	padding: 1em;
 }
