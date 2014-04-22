@@ -37,7 +37,8 @@ class Page {
 		$path = explode('/', $path);
 
 		// Eliminate last element if it's empty
-		if(empty(end($path))) {
+		$pathSize = count($path);
+		if($pathSize > 0 AND empty($path[$pathSize])) {
 			array_pop($path);
 		}
 
