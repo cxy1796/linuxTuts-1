@@ -76,5 +76,21 @@ class Page {
 	public function getRootURL() {
 		return 'http://localhost:8888/linuxTuts/';
 	}
+
+	public function generateBreadcrumbs() {
+		$output = '<ul>';
+		$crumbs = $this->getPagePath();
+		foreach($crumbs as $key=>$crumb) {
+			$name = str_replace('-', ' ', $crumb);
+			$name = ucwords($name);
+
+			$linkPathChunks = array_slice($crumbs, 0, $key+1);
+			$link = $this->getRootURL() . implode('/', $linkPathChunks);
+			$output .= '<a href="'.$link .'/"><li>' . $name . '</li></a><li class="arrow">&rsaquo;</li>';
+		}
+		$output = rtrim($output, '<li class="arrow">&rsaquo;</li>');
+		$output .= '</ul>';
+		return $output;
+	}
 }
 ?>
