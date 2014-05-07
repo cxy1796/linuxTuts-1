@@ -15,21 +15,24 @@ html, body {
 	font-family: "Lemon", cursive;
 	font-size: 6em;
 	font-weight: 100;
-	text-shadow: 0 4px 10px #000;
+	text-shadow: 4px 4px 2px #2B1825;
 }
 
 .logoLinux {
-	color: #FFF;
+	color: #EDEDED;
 }
 
 .logoTuts {
-	color: #d9663d;
+	color: #D9663D;
 }
 
 #sections {
 	min-width: 60%;
 	max-width: 90%;
 	margin: 0 1em 3em 1em;
+	position: relative;
+	overflow: hidden;
+	margin-left:4.75%;
 }
 
 #sections div {
@@ -44,12 +47,15 @@ html, body {
 
 .section > p {
 	text-align: justify;
+	margin:0 20%;
 }
 
 #sections .divider {
 	width: 1.5%;
 	text-align: center;
-	height: 100%;
+	height: 175px;
+	position:relative;
+	top:-175px;
 }
 
 #sections .divider div {
@@ -62,7 +68,7 @@ html, body {
 
 h2 {
 	padding-bottom: .5em;
-	border-bottom: solid 2px #FFF;
+/*	border-bottom: solid 2px #FFF;*/
 	margin-left: 1em;
 	margin-right: 1em;
 }
@@ -73,12 +79,18 @@ button {
 }
 
 #bigSearch input {
-	-webkit-border-radius: 10px;
-	border-radius: 10px;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+	width:19%;
+}
+
+#bigSearch:focus, input:focus{
+    outline: 0;
 }
 
 .container {
 	color: #EEE;
+
 }
 
 .container a {
