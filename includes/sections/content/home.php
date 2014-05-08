@@ -22,8 +22,8 @@
 		<h2 style="font-size: inherit;">Search for a Linux Command:</h2>
 		<form name="siteSearch" id="siteSearch">
 			<input type="text" name="searchInput" id="searchInput/">
-			<button>Search</button>
+			<!--<button>Search</button>-->
 		</form>
-		or <a href="reference.html">view entire command reference.</a>
+		<!-- or <a href="reference.html">view entire command reference.</a> -->
 	</div>
 </div>

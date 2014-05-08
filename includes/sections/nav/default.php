@@ -4,7 +4,7 @@
 
 	// Top Nav Items
 	$items = array(
-			'Home' => $rootUrl,
+			// 'Home' => $rootUrl,
 			'Reference' => $rootUrl . 'reference/',
 			'Lessons' => $rootUrl . 'lessons/',
 			'Activities' => $rootUrl . 'activities/',
@@ -12,8 +12,9 @@
 		);
 ?>
 <nav>
-	<span id="topLogo">LT</span>
+	<!-- <span id="topLogo">LT</span> -->
 	<ul>
+		<li id="topLogo"><span><a href="<?php echo $this->getRootUrl(); ?>">LT</a></span></li>
 	<?php
 		$page = $this->getSectionName();
 		foreach($items as $name => $link) {

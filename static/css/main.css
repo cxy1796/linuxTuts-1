@@ -1,7 +1,7 @@
 html, body {
 	margin: 0;
 	padding: 0;
-	font: 100%/1.5 'Droid Sans', sans-serif;
+	font: 100%/1.5 "Open Sans", sans-serif;
 	background: #F6F6F6;
 }
 body {
@@ -17,6 +17,7 @@ a {
 	text-align: left;
 	background: #592547;
 	white-space:nowrap;
+	position:relative;
 }
 
 #topLogo {
@@ -24,17 +25,29 @@ a {
 	color: #FFF;
 	font-family: "Lemon", cursive;
 	font-weight: bold;
-	font-size: 2em;
-	margin: 0 .5em;
+	font-size: 2.2em;
+	margin: 0 1em;
 	position: relative;
-	top: .1em;
+	top: .2em;
+}
+
+#topLogo a{
+	color:white;
+	text-decoration: none;
+	padding: 0 0.2em;
+
+}
+#topLogo a:hover{
+	border-bottom: none;
+	/*background: #ebd451;*/
+	background: transparent;
 }
 
 #siteHeader nav ul {
 	display: inline-block;
-   list-style-type: none;
-   padding: 0;
-   margin: 0;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
 
@@ -44,16 +57,16 @@ a {
 	margin: 0;
 }
 
-#siteHeader nav a {
+#siteHeader nav>ul>li>a {
 	display: inline-block;
 	text-decoration: none;
 	color: #d6d6d6;
-	padding: 1em .5em;
+	padding: 1em; 
 	border-right: 1px solid #CCC;
 	border-bottom: 2px solid transparent;
 }
 
-#siteHeader nav a.active {
+#siteHeader nav>ul>li>a.active {
 	color: #edb451;
 }
 
@@ -64,12 +77,15 @@ a {
 }
 
 #siteHeader nav li:first-child {
-	padding-left: 2em;
+	padding-left: 0.5em;
 }
 
 #search {
-	float:right;
+	position: absolute;
+	right: 1em;
+	top:0px;
 	padding: 1em .5em 1em 0;
+	width: 10%; 
 }
 
 .container {
@@ -115,7 +131,9 @@ a {
 	font-size: 1.5em;
 }
 #bigSearch input {
-	padding: .5em 1em;
+	padding: 20px 8px 2px 8px;
+	margin-left:10px;
+	/*padding: .2em .8em;*/
 	font-size: inherit;
 }
 
@@ -132,11 +150,11 @@ h2 {
 	line-height: 1em;
 	font-weight: 400;
 	padding-bottom: .5em;
-	border-bottom: solid 3px #592947;
+/*	border-bottom: solid 3px #592947;*/
 	margin-top: 1em;
 }
 
-button {
+/*button {
 	padding: .5em 1em;
 	font-size: inherit;
 	display: inline-block;
@@ -171,7 +189,7 @@ button {
 
 .button:hover {
 	color: #FFF;
-}
+}*/
 
 footer {
 	display: block;
