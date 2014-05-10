@@ -45,9 +45,6 @@ class Page {
 		$page = end($path);
 		$this->page = $page;
 		$this->pagePath = $path;
-
-		require('config.php');
-		require('DB.php');
 	}
 
 	// Attempt to load a page-specific version of this section. If none exists, use default.
@@ -77,7 +74,7 @@ class Page {
 
 	// Temporary. Something better will come later...
 	public function getRootURL() {
-		return ROOT_URL;
+		return 'http://localhost:80/linuxTuts-master';
 	}
 
 	public function generateBreadcrumbs() {

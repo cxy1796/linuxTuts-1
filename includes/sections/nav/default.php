@@ -24,8 +24,10 @@
 	?>
 	</ul>
 	<div id="search">
-		<form name="siteSearch" id="siteSearch">
-			<input type="text" name="searchInput" id="searchInput/">
+
+		<form name="siteSearch" role="search" id="siteSearch">
+				<input type="text" class="form-control" placeholder="Search..." name="searchInput" id="searchInput/">			
+			<!--<button>Search</button>-->
 		</form>
 	</div>
 </nav>

@@ -20,10 +20,12 @@ html, body {
 
 .logoLinux {
 	color: #EDEDED;
+	/* Font goes here*/ 
 }
 
 .logoTuts {
 	color: #D9663D;
+	/* Font goes here*/ 
 }
 
 #sections {
@@ -56,6 +58,7 @@ html, body {
 	height: 175px;
 	position:relative;
 	top:-175px;
+	
 }
 
 #sections .divider div {
