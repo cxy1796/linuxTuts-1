@@ -191,6 +191,9 @@ h2 {
 	color: #FFF;
 }*/
 
+ol.section {
+	margin-bottom: 2em;
+}
 footer {
 	display: block;
 	width: 100%;
@@ -268,5 +271,5 @@ table.admin {
 	border: 1px solid #CCC;
 }
 .admin td {
-	padding: 1em;
+	padding: .6em;
 }

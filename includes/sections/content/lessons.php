@@ -7,16 +7,41 @@
 			These lessons will get you started with Unix/Linux. This is the place to learn the basics.
 			Each leson is sequential and builds on the previous.
 		</p>
-		<?php
+
+		These are coming from the DB:
+		<ol style="clear:left;">
+			<?php
+			// Commence super fast, uber safe bound PDO queries!
+			// Hooray! No mysql_query nonsense here! :)
 			$db = $this->getDBHandler();
-			$query = $db->prepare("select * from lessons");
+			$query = $db->prepare("SELECT id, webname, name, section, `order` FROM lessons ORDER BY section, `order`");
 			$query->execute();
 			$lessons = $query->fetchAll(PDO::FETCH_ASSOC);
-			foreach($lessons as &$lesson) {
-				echo $lesson['id'];
-			}
- 		?>
+			$lastSection = null;
 
+			foreach($lessons as &$lesson) {
+
+				// Start a new 'section' heading if this item's section is different than the previous items'
+				if(!isset($lastSection) OR $lastSection !== $lesson['section']) {
+				
+					// End the previous ol if this is not the first section
+					if(isset($lastSection)){
+						echo '</ol>';
+					}
+
+					// Start the new section
+					echo "<ol class=\"section\"><h3>Section " . $lesson['section'] . "</h3>\n";
+				}
+
+				// Output the lesson li as normal.
+				echo '<li><a href="'.$this->getRootURL().'lessons/'.$lesson['webname'].'/">'.$lesson['name'].'</a></li>';
+				$lastSection = $lesson['section'];
+			}
+			?>
+		</ol>
+
+		<br/><br/><br/><br/>
+ 		These are static HTML--- just for reference. Will be deleted later.
 		<ol style="clear:left;">
 			<li><a href="<?php echo $this->getRootURL(); ?>lessons/what-is-unix/">What is UNIX?</li>
 			<li><a href="<?php echo $this->getRootURL(); ?>lessons/files-and-processes/">Files and processes</li>
