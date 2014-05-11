@@ -7,9 +7,19 @@
 			These lessons will get you started with Unix/Linux. This is the place to learn the basics.
 			Each leson is sequential and builds on the previous.
 		</p>
+		<?php
+			$db = $this->getDBHandler();
+			$query = $db->prepare("select * from lessons");
+			$query->execute();
+			$lessons = $query->fetchAll(PDO::FETCH_ASSOC);
+			foreach($lessons as &$lesson) {
+				echo $lesson['id'];
+			}
+ 		?>
+
 		<ol style="clear:left;">
-			<li><a href="<?php echo $this->getRootURL(); ?>/lessons/what-is-unix/">What is UNIX?</li>
-			<li><a href="<?php echo $this->getRootURL(); ?>/lessons/files-and-processes/">Files and processes</li>
+			<li><a href="<?php echo $this->getRootURL(); ?>lessons/what-is-unix/">What is UNIX?</li>
+			<li><a href="<?php echo $this->getRootURL(); ?>lessons/files-and-processes/">Files and processes</li>
 			<li><a href="#">The Directory Structure</li>
 			<li><a href="#">Starting an UNIX terminal</li>
 			<li><a href="#">Listing files and directories</li>

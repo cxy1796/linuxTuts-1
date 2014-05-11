@@ -259,3 +259,14 @@ nav.sequence ul li {
 	font-size: 1em;
 	background-color: #592547;
 }
+
+table.admin {
+	border-collapse:collapse;
+	width: 100%;
+}
+.admin table,tr,td {
+	border: 1px solid #CCC;
+}
+.admin td {
+	padding: 1em;
+}

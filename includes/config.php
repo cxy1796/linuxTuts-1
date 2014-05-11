@@ -1,4 +1,5 @@
 <?php
+
 // Basic config junk
 
 	$startTime = microtime(true);
