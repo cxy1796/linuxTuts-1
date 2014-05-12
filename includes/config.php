@@ -4,7 +4,7 @@
 	$startTime = microtime(true);
 	define('START',$startTime);
 	$host = $_SERVER['HTTP_HOST'];
-	define('ROOT_URL', 'http://' . $host . '/linuxTuts/');
+	define('ROOT_URL', 'http://' . $host . '/linuxTuts-1/');
 
 	define('DEBUG',FALSE);
 	
