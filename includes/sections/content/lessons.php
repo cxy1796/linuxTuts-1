@@ -42,7 +42,7 @@
 
 		<br/><br/><br/><br/>
  		These are static HTML--- just for reference. Will be deleted later.
-		<ol style="clear:left;">
+		<ol id="lessonList"style="clear:left;">
 			<li><a href="<?php echo $this->getRootURL(); ?>lessons/what-is-unix/">What is UNIX?</li>
 			<li><a href="<?php echo $this->getRootURL(); ?>lessons/files-and-processes/">Files and processes</li>
 			<li><a href="#">The Directory Structure</li>
