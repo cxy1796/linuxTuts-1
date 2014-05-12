@@ -26,8 +26,8 @@ if(empty($tPost['order'])) {
 if(empty($tPost['content'])) {
 	$errors[] = ('Content cannot be left blank.');
 }
-if(!preg_match('/^([0-9A-Za-z_-]+)$/', $tPost['webname'])) {
-	$errors[] = ('Webname should only contain alphanumeric characters, underscores, and hyphens.');
+if(!preg_match('/^([0-9a-z_-]+)$/', $tPost['webname'])) {
+	$errors[] = ('Webname should only contain lower case letters, numbers, underscores, and hyphens.');
 }
 if(!preg_match('/^([0-9]+)$/', $tPost['section'])) {
 	$errors[] = ('Section must be a positive integer.');

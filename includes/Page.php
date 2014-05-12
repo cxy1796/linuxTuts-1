@@ -53,10 +53,12 @@ class Page {
 
 		$usePage = empty($pageOverride) ? $this->page : $pageOverride;
 
-		// Work with deeper nested content correctly.
-		// For now, deep content will just rely on the parent "section" for most of its assets.
+		// Work with database-sourced content correctly
 		if(count($this->pagePath) > 1 AND $section === 'content' AND $this->pagePath[0] !== 'admin') {
-			$section = $section . '/' . $this->getSectionName();
+
+			// If the section is 'lessons', load the template file from a path like 'lessons_item_template'
+			$usePage = $this->getSectionName() . '_item_template';
+			//$path = realpath(dirname(__FILE__)) . '/sections/' . $section . '/' . $usePage . '.php';
 		}
 
 		error_log('pagepath: ' . var_export($this->pagePath,true));
@@ -67,7 +69,9 @@ class Page {
 			//$usePage = empty($this->pagePath) ? '' : $this->pagePath[];
 		}
 
-		$path = realpath(dirname(__FILE__)) . '/sections/' . $section . '/' . $usePage . '.php';
+		if(!isset($path)) {
+			$path = realpath(dirname(__FILE__)) . '/sections/' . $section . '/' . $usePage . '.php';
+		}
 
 		if(file_exists($path)) {
 			include($path);

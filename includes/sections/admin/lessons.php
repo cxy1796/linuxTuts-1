@@ -1,6 +1,7 @@
 <div class="container" style="padding: 0 1em;">
 	<h1>Existing Lessons</h1>
 	<P>Sorted by Section, Order in Section</p>
+	<a href="#new">Add a new lesson</a>
 	<table class="admin">
 		<thead>
 			<tr>
@@ -38,5 +39,37 @@
 	?>
 	</table>
 
-	<form action="/users/login" method="post" accept-charset="utf-8" 
+	<a name="new"></a>
+	<form class="adminForm" action="<?php echo $this->getRootURL(); ?>admin_backend/lessonAdd.php" method="post" accept-charset="utf-8" name="addLesson">
+		<h3>Add New Lesson</h3>
+		<p>Please enter data carefully, because the database is immutable for now (add and read only, no edits/deletes)</p>
+		<label for="webname">
+			Webname
+			<div>(Short version of name, no spaces or special chars)</div>
+		</label>
+		<input type="text" name="webname"/>
+		<label for="name">
+			Name
+			<div>Full name</div>
+		</label>
+		<input type="text" name="name"/>
+		<label for="section">
+			Section
+			<div>Lesson section number. Will be used to group and sort lessons.</div>
+		</label>
+		<input type="text" name="section"/>
+		<label for="order">
+			Order
+			<div>Number of this lesson in its Section. Will be used to sort and navigate lessons linearly.</div>
+		</label>
+		<input type="text" name="order"/>
+		<label for="content">
+			Content
+			<div>The content! No need to include navigation.</div>
+			<div>HTML is allowed. Surround command names in *** like ***pwd*** to make it auto-link to a command page.</div>
+			<div>H3 tags will be automatically scraped for the page-level table of contents.</div>
+		</label>
+		<textarea name="content" rows="30"></textarea>
+		<input type="submit" name="submit"/>
+	</form>
 </div>
