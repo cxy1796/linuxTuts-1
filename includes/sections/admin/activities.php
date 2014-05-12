@@ -1,15 +1,14 @@
 <div class="container" style="padding: 0 1em;">
-	<h1>Existing Lessons</h1>
-	<P>Sorted by Section, Order in Section</p>
-	<a href="#new">Add a new lesson</a>
+	<h1>Existing Activities</h1>
+	<P>Sorted by Name</p>
+	<a href="#new">Add a new activity</a>
 	<table class="admin">
 		<thead>
 			<tr>
 				<td>ID</td>
 				<td>Webname</td>
 				<td>Name</td>
-				<td>Section</td>
-				<td>Order In Section</td>
+				<td>Difficulty</td>
 				<td>Content</td>
 				<td>Created</td>
 			</tr>
@@ -20,7 +19,7 @@
 		// Commence super fast, uber safe bound PDO queries!
 		// Hooray! No mysql_query nonsense here! :)
 		$db = $this->getDBHandler();
-		$query = $db->prepare("SELECT id, webname, name, section, `order`, length(content) contentLength, substring(`content`, 1, :contentLengthMax) content, created FROM lessons ORDER BY section, `order`");
+		$query = $db->prepare("SELECT id, webname, name, difficulty, length(content) contentLength, substring(`content`, 1, :contentLengthMax) content, created FROM activities ORDER BY name");
 		$query->bindParam(':contentLengthMax', $contentLengthMax);
 		$query->execute();
 		$lessons = $query->fetchAll(PDO::FETCH_ASSOC);
@@ -30,8 +29,7 @@
 			<td>'.$lesson['id'].'</td>
 			<td>'.$lesson['webname'].'</td>
 			<td>'.$lesson['name'].'</td>
-			<td>'.$lesson['section'].'</td>
-			<td>'.$lesson['order'].'</td>
+			<td>'.$lesson['difficulty'].'</td>
 			<td>'.$lesson['content'] . $ellipsis . '</td>
 			<td>'.$lesson['created'].'</td>
 			</tr>';
@@ -40,8 +38,8 @@
 	</table>
 
 	<a name="new"></a>
-	<form class="adminForm" action="<?php echo $this->getRootURL(); ?>admin_backend/lessonAdd.php" method="post" accept-charset="utf-8" name="addLesson">
-		<h3>Add New Lesson</h3>
+	<form class="adminForm" action="<?php echo $this->getRootURL(); ?>admin_backend/activityAdd.php" method="post" accept-charset="utf-8" name="addActivity">
+		<h3>Add New Activity</h3>
 		<p>Please enter data carefully, because the database is immutable for now (add and read only, no edits/deletes)</p>
 		<label for="webname">
 			Webname
@@ -53,16 +51,11 @@
 			<span>Full name</span>
 		</label>
 		<input type="text" name="name"/>
-		<label for="section">
-			Section
-			<span>Lesson section number. Will be used to group and sort lessons.</span>
+		<label for="difficulty">
+			Difficulty
+			<span>Integer 1-5</span>
 		</label>
-		<input type="text" name="section"/>
-		<label for="order">
-			Order
-			<span>Number of this lesson in its Section. Will be used to sort and navigate lessons linearly.</span>
-		</label>
-		<input type="text" name="order"/>
+		<input type="text" name="difficulty"/>
 		<label for="content">
 			Content
 			<span>The content! No need to include navigation.</span>

@@ -265,8 +265,28 @@ nav.sequence ul li {
 }
 
 
+.adminForm {
+	width: 100%;
+	margin: 0 1em;
+	padding: 2em;
+	background: #FFF;
+}
+.adminForm label {
+	font-weight: bold;
+}
 input, select, textarea{
     color: #000000;
+}
+.adminForm input, textarea {
+	display: block;
+	width: 90%;
+	padding: .5em;
+	font-size: 1.1em;
+	margin-bottom: 1.5em;
+}
+.adminForm span {
+	display: block;
+	font-weight: normal;
 }
 .lessonList a:hover
 {
@@ -283,4 +303,7 @@ table.admin {
 }
 .admin td {
 	padding: .6em;
+}
+.diff {
+	float:right;
 }

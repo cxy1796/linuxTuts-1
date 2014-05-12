@@ -9,6 +9,21 @@
 			something hands&dash;on and useful.
 		</p>
 		<ul style="clear: left;">
+			<?php
+			// Commence super fast, uber safe bound PDO queries!
+			// Hooray! No mysql_query nonsense here! :)
+			$db = $this->getDBHandler();
+			$query = $db->prepare("SELECT id, webname, name, difficulty FROM activities ORDER BY difficulty");
+			$query->execute();
+			$activities = $query->fetchAll(PDO::FETCH_ASSOC);
+
+			foreach($activities as &$activity) {
+				echo '<li>
+					<a href="'.$this->getRootURL().'activities/'.$activity['webname'].'/">'.$activity['name'].'</a>
+					<span class="diff">Difficulty: '.$activity['difficulty'].'</span>
+				</li>';
+			}
+			?>
 			<li><a href="./changing-permissions/">Changing Permissions</a></li>
 			<li><a href="#">Creating an Apache Server</li>
 			<li><a href="#">Virtualize an Operating System</li>
