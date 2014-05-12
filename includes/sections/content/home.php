@@ -1,25 +1,20 @@
 <div class="container" style="text-align: center;">
 	<section id="sections">
 		<div class="section">
-			
-			<a href="<?php echo $this->getRootURL(); ?>contact/"> <img src="static/images/icons/icon_10918.svg" alt="Reference" /> </a>
 			<h2>Reference</h2>
 			<a href="<?php echo $this->getRootURL(); ?>contact/"> <img src="static/images/icons/icon_10918.svg" alt="Reference" /> </a>
 			<p>Find that one command you're looking for</p>
 		</div>
 		<div class="divider"><div>&nbsp;</div></div>
 		<div class="section">
-			
-			<a href="<?php echo $this->getRootURL(); ?>contact/"> <img src="static/images/icons/icon_31952.svg" alt="Lessons" /> </a>
 			<h2>Lessons</h2>
 			<a href="<?php echo $this->getRootURL(); ?>contact/"> <img src="static/images/icons/icon_31952.svg" alt="Lessons" /> </a>
 			<p>The best place to get started on your Linux journey</p>
 		</div>
 		<div class="divider"><div>&nbsp;</div></div>
 		<div class="section">
-			
-			<a href="<?php echo $this->getRootURL(); ?>contact/"> <img src="static/images/icons/icon_21457.svg" alt="Activities" /> </a>
 			<h2>Activities</h2>
+			<a href="<?php echo $this->getRootURL(); ?>contact/"> <img src="static/images/icons/icon_21457.svg" alt="Activities" /> </a>
 			<p>Find those specific tasks you're looking to accomplish here</p>
 		</div>
 	</section>
