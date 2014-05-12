@@ -164,6 +164,9 @@ h2 {
 }
 
 
+ol.section {
+	margin-bottom: 2em;
+}
 footer {
 	display: block;
 	width: 100%;
@@ -232,6 +235,29 @@ nav.sequence ul li {
 	background-color: #592547;
 }
 
+.adminForm {
+	width: 100%;
+	margin: 0 1em;
+	padding: 2em;
+	background: #FFF;
+}
+.adminForm label {
+	font-weight: bold;
+}
+input, select, textarea{
+    color: #000000;
+}
+.adminForm input, textarea {
+	display: block;
+	width: 90%;
+	padding: .5em;
+	font-size: 1.1em;
+	margin-bottom: 1.5em;
+}
+.adminForm span {
+	display: block;
+	font-weight: normal;
+}
 input, select, textarea{
     color: #000000;
 }
@@ -240,4 +266,18 @@ input, select, textarea{
 	font-weight: bold;
 	text-decoration:none;
 	color: #712323;
+
+}
+table.admin {
+	border-collapse:collapse;
+	width: 100%;
+}
+.admin table,tr,td {
+	border: 1px solid #CCC;
+}
+.admin td {
+	padding: .6em;
+}
+.diff {
+	float:right;
 }

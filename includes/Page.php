@@ -7,6 +7,7 @@ class Page {
 	private $pagePath = array();
 
 	function __construct($custom = "") {
+		require('config.php');
 		empty($custom) ? $this->loadPage($_GET['page']) : $this->loadPage($custom);
 	}
 
@@ -52,29 +53,43 @@ class Page {
 
 		$usePage = empty($pageOverride) ? $this->page : $pageOverride;
 
-		// Work with deeper nested content correctly.
-		// For now, deep content will just rely on the parent "section" for most of its assets.
-		if(count($this->pagePath) > 1 AND $section === 'content') {
-			$section = $section . '/' . $this->getSectionName();
+		// Work with database-sourced content correctly
+		if(count($this->pagePath) > 1 AND $section === 'content' AND $this->pagePath[0] !== 'admin') {
+
+			// If the section is 'lessons', load the template file from a path like 'lessons_item_template'
+			$usePage = $this->getSectionName() . '_item_template';
+			//$path = realpath(dirname(__FILE__)) . '/sections/' . $section . '/' . $usePage . '.php';
 		}
 
-		$path = realpath(dirname(__FILE__)) . '/sections/' . $section . '/' . $usePage . '.php';
+		error_log('pagepath: ' . var_export($this->pagePath,true));
+		error_log('section: ' . var_export($section,true) . '       ' . $this->getSectionName());
+		if($this->pagePath[0] === 'admin' AND $section === 'content') {
+			//$path = realpath(dirname(__FILE__)) . '/sections/admin/' . $usePage . '.php';
+			$section = 'admin';
+			//$usePage = empty($this->pagePath) ? '' : $this->pagePath[];
+		}
+
+		if(!isset($path)) {
+			$path = realpath(dirname(__FILE__)) . '/sections/' . $section . '/' . $usePage . '.php';
+		}
 
 		if(file_exists($path)) {
 			include($path);
 		} else {
+			error_log('Could not load section \'' . $section . '\' at path ' . $path . '. Attempting another path...');
 			$path = realpath(dirname(__FILE__)) . '/sections/' . $section . '/default.php';
 			if(file_exists($path)) {
+				error_log('Okay, found it! :)  File found at ' . $path);
 				include($path);
 			} else {
-				throw new Exception('Could not load section ' . $section . ' at path ' . $path);
+				throw new Exception('Could not load section \'' . $section . '\' at path ' . $path);
 			}
 		}
 	}
 
 	// Temporary. Something better will come later...
 	public function getRootURL() {
-		return 'http://localhost:80/linuxTuts-master';
+		return ROOT_URL;
 	}
 
 	public function generateBreadcrumbs() {
@@ -92,6 +107,17 @@ class Page {
 		$output = rtrim($output, '<li class="arrow">&rsaquo;</li>');
 		$output .= '</ul>';
 		return $output;
+	}
+
+	public function getDBHandler() {
+		try {
+			$dsn = ('mysql:host=' . DB_HOST . ';dbname=' . DB_NAME);
+			return new PDO($dsn, DB_USER, DB_PASS);
+		}
+		catch (PDOException $e)  {
+			print "Error!: " . $e->getMessage() . "<br/>";
+			die();
+		}
 	}
 }
 ?>
