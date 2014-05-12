@@ -59,8 +59,7 @@ class Page {
 			$section = $section . '/' . $this->getSectionName();
 		}
 
-			error_log('pagepath: ' . var_export($this->pagePath,true));
-
+		error_log('pagepath: ' . var_export($this->pagePath,true));
 		error_log('section: ' . var_export($section,true) . '       ' . $this->getSectionName());
 		if($this->pagePath[0] === 'admin' AND $section === 'content') {
 			//$path = realpath(dirname(__FILE__)) . '/sections/admin/' . $usePage . '.php';
