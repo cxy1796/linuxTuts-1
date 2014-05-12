@@ -23,6 +23,7 @@ a {
 #topLogo {
 	display: inline-block;
 	color: #FFF;
+	/*Fonts not working */
 	font-family: "Lemon", cursive;
 	font-weight: bold;
 	font-size: 2.2em;
@@ -106,6 +107,15 @@ a {
 	float: left;
 }
 
+.legible ul{
+	list-style-type: none;
+}
+
+.legible li{
+	padding: 1em;
+	border-bottom: 1px solid grey;
+}
+
 .legible h3 {
 	border-bottom: 1px solid #CCC;
 }
@@ -150,46 +160,9 @@ h2 {
 	line-height: 1em;
 	font-weight: 400;
 	padding-bottom: .5em;
-/*	border-bottom: solid 3px #592947;*/
 	margin-top: 1em;
 }
 
-/*button {
-	padding: .5em 1em;
-	font-size: inherit;
-	display: inline-block;
-	background: #4377bf;
-	color: #FFF;
-	border:1px solid #000;
-	-moz-border-radius:10px;
-	-webkit-border-radius:10px;
-	border-radius:10px;
-	border-bottom:1px solid #9f9f9f;
-	-moz-box-shadow:inset 0 1px 0 rgba(255,255,255,0.5);
-	-webkit-box-shadow:inset 0 1px 0 rgba(255,255,255,0.5);
-	box-shadow:inset 0 1px 0 rgba(255,255,255,0.5);
-}
-
-.button {
-	background: #52616D;
-	padding: .5em;
-	white-space: nowrap;
-	-webkit-border-radius: 5px;
-	border-radius: 5px;
-}
-
-.button:hover {
-	background: orange;
-}
-
-.button {
-	color: #E5E1D1;
-	text-decoration: none;
-}
-
-.button:hover {
-	color: #FFF;
-}*/
 
 footer {
 	display: block;
@@ -199,6 +172,7 @@ footer {
 #footerContainer {
 	margin-top: 3em;
 	padding: 2em;
+	color: #edb451;
 }
 
 #footerContainer a {
@@ -229,10 +203,7 @@ nav.breadcrumbs ul li {
 	display: inline-block;
 	padding: .33em .66em;
 	margin: 0 .5em;
-	background-color: #222;
-	border: 1px solid #000;
-	-webkit-border-radius: 1em;
-	border-radius: 1em;
+
 }
 nav.breadcrumbs ul li.arrow {
 	background-color: transparent;
@@ -241,15 +212,16 @@ nav.breadcrumbs ul li.arrow {
 	margin: 0 inherit;
 	line-height: 1em;
 	border: none;
+	color: grey;
 }
 nav.breadcrumbs ul a {
 	text-decoration: none;
-	color: #EEE;
+	color: #D9663D;
 }
-nav.breadcrumbs ul a li:hover {
+/*nav.breadcrumbs ul a li:hover {
 	background-color: #FFF;
 	color: #000;
-}
+}*/
 
 nav.sequence {
 	margin: 2em 0;
@@ -258,4 +230,14 @@ nav.sequence {
 nav.sequence ul li {
 	font-size: 1em;
 	background-color: #592547;
+}
+
+input, select, textarea{
+    color: #000000;
+}
+.lessonList a:hover
+{
+	font-weight: bold;
+	text-decoration:none;
+	color: #712323;
 }

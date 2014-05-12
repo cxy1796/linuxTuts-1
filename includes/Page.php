@@ -74,7 +74,7 @@ class Page {
 
 	// Temporary. Something better will come later...
 	public function getRootURL() {
-		return 'http://localhost:80/web2final/linuxTuts-master';
+		return 'http://localhost:80/linuxTuts-master';
 	}
 
 	public function generateBreadcrumbs() {
