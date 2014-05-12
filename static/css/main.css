@@ -192,6 +192,9 @@ h2 {
 	color: #FFF;
 }*/
 
+ol.section {
+	margin-bottom: 2em;
+}
 footer {
 	display: block;
 	width: 100%;
@@ -261,6 +264,7 @@ nav.sequence ul li {
 	background-color: #592547;
 }
 
+
 input, select, textarea{
     color: #000000;
 }
@@ -269,4 +273,14 @@ input, select, textarea{
 	font-weight: bold;
 	text-decoration:none;
 	color: #712323;
+}
+table.admin {
+	border-collapse:collapse;
+	width: 100%;
+}
+.admin table,tr,td {
+	border: 1px solid #CCC;
+}
+.admin td {
+	padding: .6em;
 }
