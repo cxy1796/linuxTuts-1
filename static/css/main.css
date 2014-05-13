@@ -2,7 +2,7 @@ html, body {
 	margin: 0;
 	padding: 0;
 	font: 100%/1.5 "Open Sans", sans-serif;
-	background: #F6F6F6;
+	background: #efedf0;
 }
 body {
 	text-align: center;
@@ -69,8 +69,8 @@ a {
 	color: #edb451;
 }
 
-#siteHeader nav a:hover {
-	background: #FFF;
+#siteHeader nav>ul>li>a:hover {
+	background: #EEE;
 	color: #111;
 	border-bottom: 2px solid orange;
 }
@@ -157,13 +157,14 @@ h2 {
 	line-height: 1em;
 	font-weight: 400;
 	padding-bottom: .5em;
-	margin-top: 1em;
+	margin-top: 2em;
 }
 
 
 ol.section {
 	margin-bottom: 2em;
 }
+
 footer {
 	display: block;
 	width: 100%;
@@ -172,7 +173,7 @@ footer {
 #footerContainer {
 	margin-top: 3em;
 	padding: 2em;
-	color: #edb451;
+	color: #d6d6d6;
 }
 
 #footerContainer a {
@@ -226,9 +227,13 @@ nav.sequence {
 
 nav.sequence ul li {
 	font-size: 1em;
-	background-color: #592547;
+	background-color: #D9663D;
+	padding: 10px 20px;
+	border-radius: 5px;
 }
-
+nav.sequence ul a{
+	color: white;
+}
 .adminForm {
 	width: 100%;
 	margin: 0 1em;

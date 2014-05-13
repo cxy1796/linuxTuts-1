@@ -1,0 +1,61 @@
+body{
+background:#efedf0;
+}
+
+h2, h3{
+	text-align: center;
+	padding: 0;
+}
+
+h3{
+	font-size: 16px;
+	color: #a0a0a0;
+}
+
+.person{
+	display: inline-block;
+	width: 15em;
+	margin-top: 2em;
+}
+
+.container{
+width:60em;
+height: 100%;
+margin-top: 1em;
+text-align: center;
+}
+
+#title{
+font-size:30px;
+
+width:100%;
+text-align:center;
+}
+
+#teamHeader{
+font-size:16px;
+color:#a0a0a0;
+width:100%;
+text-align:center;
+}
+
+.picBox{
+height:190px;
+width:190px;
+
+margin: 0 auto;
+background:#a0a0a0;
+}
+.teamMemberName{
+font-size:20px;
+
+width:100%;
+text-align:center;
+}
+.teamMemberPosition{
+font-size:18px;
+
+width:100%;
+text-align:center;
+color:#a0a0a0;
+}
